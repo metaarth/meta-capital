@@ -1,9 +1,43 @@
-import React from 'react'
+import { lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import MainLayout from '@/components/layout/MainLayout'
+import Home from '@/pages/Home/Home'
+import About from '@/pages/About/About'
+import Services from '@/pages/Services/Services'
+import InvestmentProducts from '@/pages/InvestmentProducts/InvestmentProducts'
+import InvestmentPhilosophy from '@/pages/InvestmentPhilosophy/InvestmentPhilosophy'
+import Performance from '@/pages/Performance/Performance'
+import AIF from '@/pages/AIF/AIF'
+import Journey from '@/pages/Journey/Journey'
+import Contact from '@/pages/Contact/Contact'
+import Blog from '@/pages/Blog/Blog'
+import { PageSkeleton } from '@/components/ui/skeleton'
 
-const App = () => {
+const BlogPost = lazy(() => import('@/pages/Blog/BlogPost'))
+
+export default function App() {
   return (
-    <div>App</div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/investment-philosophy" element={<InvestmentPhilosophy />} />
+        <Route path="/performance" element={<Performance />} />
+        <Route path="/aif" element={<AIF />} />
+        <Route path="/journey" element={<Journey />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/investment-products" element={<InvestmentProducts />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route
+          path="/blog/:slug"
+          element={
+            <Suspense fallback={<PageSkeleton />}>
+              <BlogPost />
+            </Suspense>
+          }
+        />
+      </Route>
+    </Routes>
   )
 }
-
-export default App

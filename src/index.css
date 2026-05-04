@@ -1,1 +1,123 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Brand: rich red + yellow scale */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Reds */
+  --color-brand-red: #dc2626;
+  --color-brand-red-deep: #991b1b;
+  --color-brand-red-dark: #b91c1c;
+  --color-brand-scarlet: #ef4444;
+  --color-brand-red-soft: #fecaca;
+  --color-brand-red-glow: rgba(220, 38, 38, 0.45);
+
+  /* Yellows */
+  --color-brand-yellow: #facc15;
+  --color-brand-yellow-deep: #ca8a04;
+  --color-brand-lemon: #fde047;
+  --color-brand-yellow-soft: #fef9c3;
+  --color-brand-yellow-pale: #fef08a;
+  --color-brand-yellow-glow: rgba(250, 204, 21, 0.35);
+
+  --color-cream: #fffef8;
+
+  /* Semantic */
+  --color-accent: #dc2626;
+  --color-accent-dark: #b91c1c;
+  --color-accent-bright: #facc15;
+  --color-accent-bright-dark: #eab308;
+  --color-gold: #fde047;
+
+  --color-brand-coral: #dc2626;
+  --color-brand-amber: #facc15;
+
+  --color-navy: #1c1917;
+  --color-navy-light: #292524;
+  --color-ink: #1c1917;
+
+  --color-surface: #fffef8;
+  --color-muted: #57534e;
+
+  --shadow-glass: 0 8px 32px rgba(220, 38, 38, 0.12);
+  --shadow-card: 0 4px 24px rgba(28, 25, 23, 0.07);
+  --shadow-yellow: 0 12px 40px rgba(250, 204, 21, 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-stone-900 antialiased font-sans dark:bg-[#1c1917] dark:text-stone-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .bg-brand-stripes {
+    background-image: repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 12px,
+      rgba(220, 38, 38, 0.06) 12px,
+      rgba(220, 38, 38, 0.06) 14px,
+      transparent 14px,
+      transparent 26px,
+      rgba(250, 204, 21, 0.12) 26px,
+      rgba(250, 204, 21, 0.12) 28px
+    );
+  }
+
+  /* Refined section backdrops (home & inner pages) — mesh, not flat rainbow */
+  .bg-section-mesh {
+    background-color: #faf9f6;
+    background-image:
+      radial-gradient(ellipse 120% 80% at 100% -30%, rgba(185, 28, 28, 0.055), transparent 52%),
+      radial-gradient(ellipse 90% 70% at -10% 80%, rgba(202, 138, 4, 0.045), transparent 48%),
+      linear-gradient(180deg, rgba(255, 254, 248, 0.9) 0%, rgba(250, 249, 246, 0.98) 100%);
+  }
+
+  .dark .bg-section-mesh {
+    background-color: #1c1917;
+    background-image:
+      radial-gradient(ellipse 100% 70% at 85% -20%, rgba(127, 29, 29, 0.18), transparent 50%),
+      radial-gradient(ellipse 80% 60% at 0% 100%, rgba(161, 98, 7, 0.08), transparent 45%),
+      linear-gradient(180deg, rgba(28, 25, 23, 1) 0%, rgba(24, 21, 19, 1) 100%);
+  }
+
+  .bg-section-veil {
+    background-color: #f5f4f0;
+    background-image: radial-gradient(
+      ellipse 140% 60% at 50% 120%,
+      rgba(254, 249, 195, 0.35),
+      transparent 58%
+    );
+  }
+
+  .dark .bg-section-veil {
+    background-color: #1c1917;
+    background-image: radial-gradient(
+      ellipse 120% 50% at 50% 100%,
+      rgba(113, 63, 18, 0.12),
+      transparent 55%
+    );
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #dc2626 0%, #facc15 55%, #eab308 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
