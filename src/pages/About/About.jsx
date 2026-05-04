@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Award, Building2, Scale } from 'lucide-react'
 import SEO from '@/components/seo/SEO'
+import { Button } from '@/components/ui/button'
 import CTASection from '@/components/sections/CTASection'
 import PageHero from '@/components/sections/PageHero'
 import { BRAND_IMG } from '@/data/brandImagery'
@@ -37,18 +39,13 @@ export default function About() {
         title="About"
         titleHighlight="Metaarth"
         titleRest="Capital"
-        description="Professional investment management with regulatory awareness, research discipline, and clear communication — aligned with the ethos described on metaarth.com."
+        description="Professional investment management with regulatory awareness, research discipline, and clear communication — built for long-term alignment with sophisticated investors."
         imageSrc={BRAND_IMG.handshake}
         imageAlt="Business partners shaking hands"
       >
-        <a
-          href="https://www.metaarth.com/"
-          className="mt-6 inline-block text-sm font-medium text-accent underline-offset-4 hover:underline dark:text-accent-bright"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Visit metaarth.com →
-        </a>
+        <Button asChild className="mt-8 gap-2">
+          <Link to="/contact">Get in touch</Link>
+        </Button>
       </PageHero>
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">

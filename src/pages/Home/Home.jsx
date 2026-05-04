@@ -220,7 +220,7 @@ export default function Home() {
               <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl border border-stone-200/80 bg-white/85 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-white/[0.06]">
                 <Heart className="size-7 text-accent dark:text-accent-bright" strokeWidth={1.5} />
               </div>
-              <div>
+    <div>
                 <h2
                   id="human-finance-heading"
                   className="font-display text-xl font-bold tracking-tight text-navy dark:text-white sm:text-2xl"
@@ -739,7 +739,7 @@ export default function Home() {
               </Button>
             </div>
           </motion.article>
-        </div>
+    </div>
       </section>
 
       <TestimonialSlider />

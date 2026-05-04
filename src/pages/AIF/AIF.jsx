@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Building2, Landmark, Shield, Users } from 'lucide-react'
 import SEO from '@/components/seo/SEO'
 import PageHero from '@/components/sections/PageHero'
+import AIFPerformanceComparison from '@/components/sections/AIFPerformanceComparison'
 import CTASection from '@/components/sections/CTASection'
 import { Button } from '@/components/ui/button'
 import { BRAND_IMG } from '@/data/brandImagery'
@@ -59,6 +60,8 @@ export default function AIF() {
           </Button>
         </div>
       </PageHero>
+
+      <AIFPerformanceComparison />
 
       <section
         className="border-t border-stone-200/60 bg-section-mesh py-20 dark:border-stone-800"

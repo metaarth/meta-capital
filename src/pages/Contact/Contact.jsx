@@ -19,7 +19,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact"
-        description="Contact Metaarth Capital — Lucknow office, phone, and email. Book a consultation or send a message."
+        description="Contact Metaarth Capital — Lucknow office, phone, and message form. Book a consultation or send a message."
         path="/contact"
       />
 
@@ -139,12 +139,9 @@ export default function Contact() {
                 </div>
                 <div className="flex gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-accent dark:text-accent-bright" />
-                  <a
-                    href="mailto:info@metaarth.com"
-                    className="text-navy hover:underline dark:text-white"
-                  >
-                    info@metaarth.com
-                  </a>
+                  <span className="text-navy dark:text-white">
+                    Use the form — we’ll reply from our official address.
+                  </span>
                 </div>
               </CardContent>
             </Card>

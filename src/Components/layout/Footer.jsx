@@ -101,9 +101,9 @@ export default function Footer() {
           </div>
           <div className="flex gap-3 text-sm">
             <Mail className="mt-0.5 size-4 shrink-0 text-brand-amber" />
-            <a href="mailto:info@metaarth.com" className="hover:text-white">
-              info@metaarth.com
-            </a>
+            <Link to="/contact" className="hover:text-white">
+              Contact / enquiries
+            </Link>
           </div>
         </div>
 

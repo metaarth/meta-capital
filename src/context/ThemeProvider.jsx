@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { ThemeContext } from '@/context/theme-context'
 
-const STORAGE_KEY = 'metaarth-theme'
+const STORAGE_KEY = 'meta-capital-theme'
 
 export function ThemeProvider({ children }) {
   const [theme, setThemeState] = useState(() => {

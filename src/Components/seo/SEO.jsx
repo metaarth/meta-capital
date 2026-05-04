@@ -12,14 +12,16 @@ export default function SEO({
 }) {
   const pageTitle = title ? `${title} | ${SITE}` : `${SITE} | Smart Investment Strategies`
   const origin =
-    typeof window !== 'undefined' ? window.location.origin : 'https://www.metaarth.com'
-  const canonical = `${origin}${path === '/' ? '' : path}`
+    typeof window !== 'undefined'
+      ? window.location.origin
+      : (import.meta.env.VITE_SITE_URL || '').replace(/\/$/, '')
+  const canonical = origin ? `${origin}${path === '/' ? '' : path}` : null
 
   return (
     <Helmet>
       <title>{pageTitle}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={canonical} />
+      {canonical ? <link rel="canonical" href={canonical} /> : null}
       {noIndex && <meta name="robots" content="noindex,nofollow" />}
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description} />
