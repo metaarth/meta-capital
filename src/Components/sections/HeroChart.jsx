@@ -66,7 +66,7 @@ export default function HeroChart() {
         ))}
       </svg>
       <p className="mt-2 text-center text-[11px] text-muted dark:text-stone-500">
-        Illustrative growth curve — not representative of any specific product
+        Illustrative growth curve, not representative of any specific product
         return.
       </p>
     </div>

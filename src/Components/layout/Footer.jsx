@@ -17,7 +17,7 @@ const footerNav = [
     links: [
       { label: 'Journey', to: '/journey' },
       { label: 'Services', to: '/services' },
-      { label: 'Investment products', to: '/investment-products' },
+      { label: 'AIF solutions', to: '/investment-products' },
       { label: 'Insights', to: '/blog' },
     ],
   },
@@ -28,7 +28,7 @@ const footerNav = [
 ]
 
 const DISCLAIMER =
-  'Mutual fund investments are subject to market risks. Read all scheme-related documents carefully before investing. Past performance is not indicative of future results. This website is for information only and does not constitute investment advice or an offer to sell.'
+  'Alternative Investment Fund investments are subject to market risks. Read all offer-related documents carefully before investing. Past performance is not indicative of future results. This website is for information only and does not constitute investment advice or an offer to sell.'
 
 export default function Footer() {
   return (
@@ -50,7 +50,7 @@ export default function Footer() {
             </Link>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
               Professional investment management for Ultra-HNIs and family
-              offices — disciplined, research-driven strategies with regulatory
+              offices, disciplined, research-driven strategies with regulatory
               oversight.
             </p>
             <p className="mt-4 text-xs leading-relaxed text-slate-500">
@@ -83,7 +83,7 @@ export default function Footer() {
           <div className="flex gap-3 text-sm">
             <MapPin className="mt-0.5 size-4 shrink-0 text-brand-amber" />
             <span>
-              Office Space No. Part 8 &amp; 9, Saran Chamber-2, Lucknow — 226001,
+              Office Space No. Part 8 &amp; 9, Saran Chamber-2, Lucknow, 226001,
               India
             </span>
           </div>

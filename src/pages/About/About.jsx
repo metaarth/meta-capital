@@ -30,7 +30,7 @@ export default function About() {
     <>
       <SEO
         title="About us"
-        description="Learn about Metaarth Capital — mission, vision, and institutional approach to investment management for Ultra-HNIs and family offices."
+        description="Learn about Metaarth Capital, mission, vision, and institutional approach to investment management for Ultra-HNIs and family offices."
         path="/about"
       />
 
@@ -38,10 +38,10 @@ export default function About() {
         eyebrow="Who we are"
         title="About"
         titleHighlight="Metaarth"
-        titleRest="Capital"
-        description="Professional investment management with regulatory awareness, research discipline, and clear communication — built for long-term alignment with sophisticated investors."
-        imageSrc={BRAND_IMG.handshake}
-        imageAlt="Business partners shaking hands"
+        titleRest=" Capital"
+        description="Professional investment management with regulatory awareness, research discipline, and clear communication, built for long-term alignment with sophisticated investors."
+        imageSrc={BRAND_IMG.city}
+        imageAlt="Modern company infrastructure and institutional office district"
       >
         <Button asChild className="mt-8 gap-2">
           <Link to="/contact">Get in touch</Link>
@@ -64,7 +64,7 @@ export default function About() {
             </h2>
             <p className="mt-4 leading-relaxed text-muted dark:text-slate-400">
               To deliver investment outcomes through rigorous research, prudent
-              risk management, and alignment with each client&apos;s objectives —
+              risk management, and alignment with each client&apos;s objectives
               without compromising transparency or regulatory standards.
             </p>
           </motion.section>
@@ -81,7 +81,7 @@ export default function About() {
               Vision
             </h2>
             <p className="mt-4 leading-relaxed text-muted dark:text-slate-400">
-              To be a trusted partner for multi-generational wealth — combining
+              To be a trusted partner for multi-generational wealth, combining
               institutional process with the attentiveness family offices expect.
             </p>
           </motion.section>
@@ -102,7 +102,7 @@ export default function About() {
           </h2>
           <p className="mt-4 max-w-3xl text-muted dark:text-slate-400">
             Our work spans equity-oriented research, portfolio construction, and
-            governance — with leadership experience across market cycles. We
+            governance, with leadership experience across market cycles. We
             emphasize Growth at Reasonable Prices (GARP) thinking: quality and
             valuation discipline rather than speculation.
           </p>
@@ -196,7 +196,7 @@ export default function About() {
           />
           <div className="border-t border-stone-200/60 bg-section-mesh px-6 py-4 dark:border-stone-700">
             <p className="text-center text-sm font-medium text-navy dark:text-stone-200">
-              Culture matters as much as models — we hire for judgment, not just
+              Culture matters as much as models, we hire for judgment, not just
               credentials.
             </p>
           </div>

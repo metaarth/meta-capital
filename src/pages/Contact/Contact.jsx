@@ -19,7 +19,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact"
-        description="Contact Metaarth Capital — Lucknow office, phone, and message form. Book a consultation or send a message."
+        description="Contact Metaarth Capital, Lucknow office, phone, and message form. Book a consultation or send a message."
         path="/contact"
       />
 
@@ -46,7 +46,7 @@ export default function Contact() {
               <CardContent>
                 {submitted ? (
                   <p className="rounded-lg bg-accent/10 px-4 py-6 text-sm text-navy dark:bg-accent-bright/10 dark:text-slate-200">
-                    Thank you — this is a demo form. Connect via phone or email
+                    Thank you, this is a demo form. Connect via phone or email
                     below for a real inquiry.
                   </p>
                 ) : (
@@ -121,7 +121,7 @@ export default function Contact() {
                 <div className="flex gap-3">
                   <MapPin className="mt-0.5 size-5 shrink-0 text-accent dark:text-accent-bright" />
                   <span>
-                    Office Space No. Part 8 &amp; 9, Saran Chamber-2, Lucknow —
+                    Office Space No. Part 8 &amp; 9, Saran Chamber-2, Lucknow
                     226001, India
                   </span>
                 </div>
@@ -140,7 +140,7 @@ export default function Contact() {
                 <div className="flex gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-accent dark:text-accent-bright" />
                   <span className="text-navy dark:text-white">
-                    Use the form — we’ll reply from our official address.
+                    Use the form, we’ll reply from our official address.
                   </span>
                 </div>
               </CardContent>
@@ -149,7 +149,7 @@ export default function Contact() {
             <div
               className="overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-100 dark:border-slate-700 dark:bg-slate-800"
               role="img"
-              aria-label="Map placeholder — Lucknow office location"
+              aria-label="Map placeholder, Lucknow office location"
             >
               <div className="flex aspect-[16/10] items-center justify-center bg-section-mesh">
                 <p className="text-center text-sm text-muted dark:text-slate-500">

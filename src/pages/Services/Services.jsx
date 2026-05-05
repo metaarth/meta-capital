@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import {
   BarChart3,
   CheckCircle2,
-  PiggyBank,
   Target,
   TrendingUp,
+  Shield,
 } from 'lucide-react'
 import SEO from '@/components/seo/SEO'
 import { Button } from '@/components/ui/button'
@@ -22,51 +22,51 @@ import { BRAND_IMG } from '@/data/brandImagery'
 
 const SERVICES = [
   {
-    id: 'mutual-funds',
+    id: 'aif-mandate',
     icon: BarChart3,
-    title: 'Mutual funds',
+    title: 'AIF mandate design',
     description:
-      'Access to diversified mutual fund strategies with selection criteria driven by fundamentals, costs, and fit with your plan.',
+      'Category III AIF mandate setup with disciplined universe selection, position sizing bands, and governance-first portfolio construction.',
     benefits: [
-      'Fund shortlisting and ongoing monitoring',
-      'Tax-aware transitions where applicable',
-      'Factsheet-driven transparency',
+      'Bottom-up research framework',
+      'Portfolio concentration guardrails',
+      'Documented investment committee process',
     ],
   },
   {
-    id: 'sip',
-    icon: PiggyBank,
-    title: 'SIP planning',
-    description:
-      'Structured systematic investment plans to reduce emotional timing decisions and support rupee-cost averaging.',
-    benefits: [
-      'Cadence aligned to cash flows',
-      'Step-up rules as income grows',
-      'Review triggers — not noise',
-    ],
-  },
-  {
-    id: 'goals',
+    id: 'eligibility',
     icon: Target,
-    title: 'Goal-based investment',
+    title: 'AIF eligibility guidance',
     description:
-      'Each goal gets a target date, required return range, and asset allocation band — so decisions stay anchored.',
+      'Structured onboarding support covering investor qualification, minimum commitment, and operational readiness before allocation.',
     benefits: [
-      'Education, retirement, liquidity buckets',
-      'Stress-testing assumptions',
-      'Course corrections with documentation',
+      'Clear minimum ticket explanation',
+      'Suitability and horizon alignment checks',
+      'Transparent onboarding documentation',
     ],
   },
   {
-    id: 'portfolio',
-    icon: TrendingUp,
-    title: 'Portfolio management',
+    id: 'risk-governance',
+    icon: Shield,
+    title: 'Risk & governance framework',
     description:
-      'Holistic oversight across holdings: drift checks, rebalancing discipline, and consolidated reporting.',
+      'Risk controls and governance standards designed for sophisticated investors who require discipline during volatile cycles.',
     benefits: [
-      'Risk budgeting across sleeves',
-      'Governance-friendly records',
-      'Quarterly or agreed review cycle',
+      'Drawdown-aware risk budgeting',
+      'Periodic exposure and concentration reviews',
+      'Escalation protocol for mandate drift',
+    ],
+  },
+  {
+    id: 'reporting',
+    icon: TrendingUp,
+    title: 'Performance & reporting',
+    description:
+      'Institutional-style reporting with performance attribution, benchmark context, and consistent disclosure cadence.',
+    benefits: [
+      'Periodic investor updates',
+      'Clear attribution and risk commentary',
+      'Review meetings with decision transparency',
     ],
   },
 ]
@@ -76,7 +76,7 @@ export default function Services() {
     <>
       <SEO
         title="Services"
-        description="Mutual funds, SIP planning, goal-based investing, and portfolio management — Metaarth Capital services for discerning investors."
+        description="AIF mandate design, eligibility support, risk governance, and reporting services from Metaarth Capital."
         path="/services"
       />
 
@@ -84,7 +84,7 @@ export default function Services() {
         eyebrow="Capabilities"
         title="Services built for"
         titleHighlight="real portfolios"
-        description="Clear scopes, professional tone, and no unrealistic promises. We focus on process, suitability, and long-term alignment — the same craft we apply on the home page, page by page."
+        description="Clear scopes, professional tone, and no unrealistic promises. We focus on process, suitability, and long-term alignment, the same craft we apply on the home page, page by page."
         imageSrc={BRAND_IMG.advisor}
         imageAlt="Advisor supporting a client with financial planning"
       />
@@ -160,7 +160,7 @@ export default function Services() {
               loading="lazy"
             />
             <p className="max-w-xl text-center text-lg leading-relaxed text-muted dark:text-stone-400 md:text-left">
-              Behind every service line is a team conversation — we’d rather
+              Behind every AIF service line is a team conversation, and we’d rather
               under-promise and document than dazzle you with jargon.
             </p>
           </motion.div>

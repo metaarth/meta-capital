@@ -7,7 +7,6 @@ import {
   Compass,
   Heart,
   LineChart,
-  PiggyBank,
   RefreshCw,
   Shield,
   Sparkles,
@@ -23,22 +22,15 @@ import TestimonialSlider from '@/components/sections/TestimonialSlider'
 import ServiceCard from '@/components/cards/ServiceCard'
 import { BLOG_POSTS } from '@/data/blog'
 
-/** Human-centered finance photography (Unsplash) */
+/** Stable finance-themed image sources */
 const IMG = {
-  hero:
-    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=85&auto=format&fit=crop',
-  advisor:
-    'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=85&auto=format&fit=crop',
-  founder:
-    'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=85&auto=format&fit=crop',
-  family:
-    'https://images.unsplash.com/photo-1511895426328-dc871f130835?w=900&q=85&auto=format&fit=crop',
-  professional:
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=900&q=85&auto=format&fit=crop',
-  meeting:
-    'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=85&auto=format&fit=crop',
-  reading:
-    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=85&auto=format&fit=crop',
+  hero: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=80',
+  advisor: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80',
+  founder: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80',
+  family: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+  professional: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80',
+  meeting: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80',
+  reading: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80',
 }
 
 const STATS = [
@@ -92,7 +84,7 @@ const PEOPLE_WE_SERVE = [
   },
   {
     title: 'Professionals & executives',
-    text: 'SIPs, tax-aware transitions, and portfolios that match real career arcs — not generic models.',
+    text: 'Institutional discipline and portfolio governance for professionals who need clarity, not complexity.',
     image: IMG.professional,
     alt: 'Smiling professional woman in office setting',
     accent: 'border-l-4 border-gold',
@@ -102,11 +94,11 @@ const PEOPLE_WE_SERVE = [
 const FAQ_ITEMS = [
   {
     q: 'Who is Metaarth Capital best suited for?',
-    a: 'Typically Ultra-HNIs, family offices, and investors who want institutional process with direct access — not off-the-shelf retail packaging.',
+    a: 'Typically Ultra-HNIs, family offices, and investors who want institutional process with direct access, not off-the-shelf retail packaging.',
   },
   {
     q: 'Do you guarantee returns?',
-    a: 'No. Mutual funds and market-linked investments carry risk. We focus on process, diversification, and alignment — not promises about outcomes.',
+    a: 'No. Mutual funds and market-linked investments carry risk. We focus on process, diversification, and alignment, not promises about outcomes.',
   },
   {
     q: 'How do you charge for advice or portfolio services?',
@@ -114,7 +106,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'How often will we review my portfolio?',
-    a: 'We agree a cadence — often quarterly or semi-annual — unless a material life or market event warrants an ad-hoc discussion.',
+    a: 'We agree a cadence, often quarterly or semi-annual, unless a material life or market event warrants an ad-hoc discussion.',
   },
 ]
 
@@ -125,7 +117,7 @@ export default function Home() {
     <>
       <SEO
         title="Home"
-        description="Grow your wealth with smart investment strategies — mutual funds, SIP, goal-based planning, and portfolio management from Metaarth Capital."
+        description="Grow your wealth through a SEBI-aligned Category III AIF approach with disciplined research, risk controls, and transparent reporting."
         path="/"
       />
 
@@ -149,24 +141,24 @@ export default function Home() {
                 id="hero-heading"
                 className="mt-5 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]"
               >
-                <span className="text-navy dark:text-white">Grow your wealth with </span>
+                <span className="text-navy dark:text-white">Build long-term wealth through </span>
                 <span className="text-gradient-brand">smart, human</span>
-                <span className="text-navy dark:text-white"> investment strategies</span>
+                <span className="text-navy dark:text-white"> AIF investing</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg text-muted dark:text-stone-400">
-                Real people behind every plan — mutual funds, SIP, and portfolio
-                management built around your goals, not a template.
+                Institutional process with a human interface. Category III AIF
+                investing designed around your goals, not a template.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
                 <Button asChild size="lg">
-                  <Link to="/investment-products">Start investing</Link>
+                  <Link to="/aif">Explore AIF</Link>
                 </Button>
                 <Button asChild variant="accent" size="lg">
                   <Link to="/contact">Book consultation</Link>
                 </Button>
               </div>
               <p className="mt-8 max-w-md text-sm italic leading-relaxed text-stone-600 dark:text-stone-500">
-                “Markets are noisy. Your future shouldn’t be — we help you stay
+                “Markets are noisy. Your future shouldn’t be, we help you stay
                 invested to the life you’re actually planning for.”
               </p>
             </motion.div>
@@ -189,7 +181,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-red-900/55 via-transparent to-yellow-400/25" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3 sm:bottom-6 sm:left-6 sm:right-6">
                   <p className="max-w-[200px] text-xs font-medium leading-snug text-white drop-shadow-md sm:max-w-xs sm:text-sm">
-                    Strategy sessions with people who speak plainly — and listen
+                    Strategy sessions with people who speak plainly, and listen
                     first.
                   </p>
                   <span className="hidden rounded-lg bg-accent-bright/95 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-navy shadow sm:block">
@@ -225,7 +217,7 @@ export default function Home() {
                   id="human-finance-heading"
                   className="font-display text-xl font-bold tracking-tight text-navy dark:text-white sm:text-2xl"
                 >
-                  Finance should feel human — not like a ticker tape
+                  Finance should feel human, not like a ticker tape
                 </h2>
                 <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted dark:text-stone-400">
                   We blend data with dialogue: your milestones, your risk sleep-at-night
@@ -275,7 +267,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who we serve — real humans */}
+      {/* Who we serve, real humans */}
       <section
         className="border-t border-stone-200/60 bg-section-mesh py-20 dark:border-stone-800"
         aria-labelledby="people-heading"
@@ -299,7 +291,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 text-muted dark:text-stone-400">
               Whether you’re protecting what you built or compounding for the next
-              chapter — the conversation starts with you, not a product shelf.
+              chapter, the conversation starts with you, not a product shelf.
             </p>
           </motion.div>
           <div className="mt-14 grid gap-8 md:grid-cols-3">
@@ -369,7 +361,7 @@ export default function Home() {
                 id="trust-heading"
                 className="font-display text-2xl font-bold text-navy dark:text-white sm:text-3xl"
               >
-                Trusted partner —{' '}
+                Trusted partner{' '}
                 <span className="text-accent dark:text-accent-bright">with room to listen</span>
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-muted dark:text-stone-400 lg:mx-0">
@@ -380,7 +372,7 @@ export default function Home() {
               <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
                 {[
                   { label: 'SEBI', sub: 'Regulatory framework', ring: 'ring-accent/30' },
-                  { label: 'AMFI', sub: 'Industry standards', ring: 'ring-accent-bright/40' },
+                  { label: 'Cat III', sub: 'AIF framework', ring: 'ring-accent-bright/40' },
                   { label: 'Compliance', sub: 'Documented processes', ring: 'ring-gold/40' },
                 ].map((b, i) => (
                   <motion.div
@@ -423,39 +415,39 @@ export default function Home() {
               id="services-heading"
               className="mt-4 font-display text-3xl font-bold text-navy dark:text-white sm:text-4xl"
             >
-              What we help you with
+              AIF capabilities we deliver
             </h2>
             <p className="mt-3 text-muted dark:text-stone-400">
-              Core building blocks for long-term wealth — explained in plain language.
+              Core capabilities for AIF investors, explained in plain language.
             </p>
           </motion.div>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <ServiceCard
               icon={BarChart3}
-              title="Mutual funds"
-              description="Fund selection and allocation aligned to your risk profile and time horizon."
-              href="/services#mutual-funds"
+              title="AIF mandate design"
+              description="Research-backed mandate construction aligned with risk budget and investment horizon."
+              href="/services#aif-mandate"
               delay={0}
             />
             <ServiceCard
-              icon={PiggyBank}
-              title="SIP planning"
-              description="Systematic plans designed to reduce timing noise and support consistency."
-              href="/services#sip"
+              icon={Target}
+              title="AIF eligibility guidance"
+              description="Clear walkthrough of ticket size, suitability, and mandate fit before onboarding."
+              href="/services#eligibility"
               delay={0.06}
             />
             <ServiceCard
               icon={Target}
-              title="Goal-based investment"
-              description="Map education, retirement, and liquidity goals to the right asset mix."
-              href="/services#goals"
+              title="Risk & governance"
+              description="Drawdown controls, documented review cadence, and decision governance."
+              href="/services#risk-governance"
               delay={0.12}
             />
             <ServiceCard
               icon={TrendingUp}
-              title="Portfolio management"
-              description="Ongoing review, rebalancing discipline, and clear reporting."
-              href="/services#portfolio"
+              title="Performance reporting"
+              description="Transparent portfolio reporting with benchmark context and risk commentary."
+              href="/services#reporting"
               delay={0.18}
             />
           </div>
@@ -559,10 +551,10 @@ export default function Home() {
                 >
                   Price is what you pay. Value is what you get.
                 </h2>
-                <p className="mt-2 text-sm text-stone-300">— Warren Buffett</p>
+                <p className="mt-2 text-sm text-stone-300">Warren Buffett</p>
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone-200/95">
                   We apply a GARP mindset: seek quality at sensible valuations, respect
-                  risk, and let process — not noise — drive decisions. The best
+                  risk, and let process, not noise, drive decisions. The best
                   spreadsheet can’t replace a clear conversation about what you’re
                   optimizing for.
                 </p>
@@ -592,7 +584,7 @@ export default function Home() {
               {
                 icon: Users,
                 title: 'Personalized advice',
-                text: 'Recommendations grounded in your constraints — not generic model portfolios.',
+                text: 'Recommendations grounded in your constraints, not generic model portfolios.',
               },
               {
                 icon: Shield,
@@ -646,7 +638,7 @@ export default function Home() {
             Common questions
           </motion.h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-sm text-muted dark:text-stone-400">
-            Straight answers — we prefer clarity over sales language.
+            Straight answers, we prefer clarity over sales language.
           </p>
           <div className="mt-10 space-y-3">
             {FAQ_ITEMS.map((item, i) => (
@@ -693,7 +685,7 @@ export default function Home() {
                 Featured insight
               </h2>
               <p className="mt-2 text-muted dark:text-stone-400">
-                Education only — not personal advice.
+                Education only, not personal advice.
               </p>
             </motion.div>
             <Button variant="ghost" className="gap-1 text-accent dark:text-accent-bright" asChild>

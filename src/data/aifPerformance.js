@@ -1,6 +1,6 @@
 /**
  * Category III AIF performance comparison rows.
- * Replace with official figures from factsheets and regulatory disclosures —
+ * Replace with official figures from factsheets and regulatory disclosures
  * these values are illustrative placeholders only.
  */
 export const AIF_PERFORMANCE_ROWS = [

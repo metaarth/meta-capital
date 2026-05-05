@@ -108,7 +108,7 @@ export default function AIFPerformanceComparison({
         </motion.div>
 
         <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-muted dark:text-stone-500">
-          Illustrative figures for layout only — not live performance data. Past
+          Illustrative figures for layout only, not live performance data. Past
           performance is not indicative of future results. Read scheme / offer
           documents and verify registration on SEBI channels. Request official
           factsheets and disclosures from our team. {meta.benchmarkNote}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 /**
- * Inner page hero — matches Home: stripes, red/yellow radials, optional image.
+ * Inner page hero, matches Home: stripes, red/yellow radials, optional image.
  */
 export default function PageHero({
   eyebrow,

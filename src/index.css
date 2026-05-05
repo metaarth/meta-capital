@@ -79,7 +79,7 @@
     );
   }
 
-  /* Refined section backdrops (home & inner pages) — mesh, not flat rainbow */
+  /* Refined section backdrops (home & inner pages), mesh, not flat rainbow */
   .bg-section-mesh {
     background-color: #faf9f6;
     background-image:

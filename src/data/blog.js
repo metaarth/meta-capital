@@ -1,6 +1,6 @@
 export const BLOG_CATEGORIES = [
   { id: 'all', label: 'All' },
-  { id: 'mutual-funds', label: 'Mutual funds' },
+  { id: 'aif', label: 'AIF' },
   { id: 'investment-tips', label: 'Investment tips' },
   { id: 'market-insights', label: 'Market insights' },
 ]
@@ -8,18 +8,18 @@ export const BLOG_CATEGORIES = [
 export const BLOG_POSTS = [
   {
     slug: 'building-a-core-equity-allocation',
-    title: 'Building a core equity allocation for long horizons',
+    title: 'Building a core AIF equity allocation',
     description:
-      'How diversification, fund selection discipline, and rebalancing support compounding without unnecessary turnover.',
-    category: 'mutual-funds',
-    categoryLabel: 'Mutual funds',
+      'How mandate clarity, allocation discipline, and rebalancing support compounding without unnecessary turnover.',
+    category: 'aif',
+    categoryLabel: 'AIF',
     readTime: '6 min read',
   },
   {
-    slug: 'sip-consistency-and-market-cycles',
-    title: 'SIP consistency across market cycles',
+    slug: 'consistency-across-market-cycles',
+    title: 'Staying consistent through market cycles',
     description:
-      'Why rupee-cost averaging works best when paired with a documented plan and periodic review — not reactive changes.',
+      'Why disciplined deployment works best when paired with a documented plan and periodic review, not reactive changes.',
     category: 'investment-tips',
     categoryLabel: 'Investment tips',
     readTime: '5 min read',
@@ -28,7 +28,7 @@ export const BLOG_POSTS = [
     slug: 'reading-risk-metrics-in-fund-factsheets',
     title: 'Reading risk metrics in fund factsheets',
     description:
-      'A practical overview of volatility measures and drawdowns — and what they do (and do not) tell you about future outcomes.',
+      'A practical overview of volatility measures and drawdowns, and what they do (and do not) tell you about future outcomes.',
     category: 'market-insights',
     categoryLabel: 'Market insights',
     readTime: '7 min read',
@@ -44,11 +44,11 @@ export const BLOG_POSTS = [
   },
   {
     slug: 'debt-funds-and-rate-environment',
-    title: 'Debt funds and the rate environment',
+    title: 'AIF risk budgeting in a changing rate cycle',
     description:
-      'High-level considerations for duration, credit quality, and suitability when rates are uncertain.',
-    category: 'mutual-funds',
-    categoryLabel: 'Mutual funds',
+      'High-level considerations for position sizing, drawdown tolerance, and mandate suitability when rates are uncertain.',
+    category: 'aif',
+    categoryLabel: 'AIF',
     readTime: '6 min read',
   },
   {

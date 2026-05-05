@@ -8,8 +8,8 @@ export default function CTASection({
   subtitle = 'Speak with our team to align strategy with your goals and risk profile.',
   primaryHref = '/contact',
   primaryLabel = 'Book consultation',
-  secondaryHref = '/investment-products',
-  secondaryLabel = 'Explore products',
+  secondaryHref = '/aif',
+  secondaryLabel = 'Explore AIF',
 }) {
   return (
     <section

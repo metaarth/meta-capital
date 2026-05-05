@@ -12,7 +12,7 @@ export default function Performance() {
     <>
       <SEO
         title="Performance"
-        description="Performance reporting and disclosures at Metaarth Capital — read scheme documents; past performance is not indicative of future results."
+        description="Performance reporting and disclosures at Metaarth Capital, read scheme documents; past performance is not indicative of future results."
         path="/performance"
       />
 
@@ -20,10 +20,10 @@ export default function Performance() {
         eyebrow="Reporting"
         title="Clarity on"
         titleHighlight="outcomes"
-        titleRest="— with honest limits"
+        titleRest="with honest limits"
         description="We believe sophisticated investors deserve clear reporting and conservative language. Markets are uncertain; labels like ‘outperformance’ should be earned in context, not marketing."
-        imageSrc={BRAND_IMG.charts}
-        imageAlt="Financial charts and market data on screens — illustrative only"
+        imageSrc="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Financial growth chart on a market screen"
       >
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild variant="accent" size="sm">
@@ -46,7 +46,7 @@ export default function Performance() {
               Mutual fund and AIF investments are subject to market risks. Past
               performance is not indicative of future results. Read all
               scheme-related documents carefully. This page does not display live
-              performance data — request official factsheets and disclosures from
+              performance data, request official factsheets and disclosures from
               our team or through prescribed regulatory channels.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Performance() {
                   'What you own, and why it fits the mandate we agreed',
                   'How risk evolved versus your comfort band',
                   'Costs, liquidity, and tax-relevant events in plain terms',
-                  'What changed since the last review — and what did not',
+                  'What changed since the last review, and what did not',
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <LineChart className="mt-0.5 size-5 shrink-0 text-accent-bright" />
@@ -100,7 +100,7 @@ export default function Performance() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent" />
               <p className="absolute bottom-6 left-6 right-6 text-sm font-medium text-white drop-shadow-md">
-                We prefer a conversation around numbers — not a PDF you file away
+                We prefer a conversation around numbers, not a PDF you file away
                 unread.
               </p>
             </motion.div>
@@ -123,7 +123,7 @@ export default function Performance() {
           <p className="mt-3 text-muted dark:text-stone-400">
             Scheme Information Documents (SID), Statement of Additional Information
             (SAI), and offer documents are the authoritative source for terms,
-            risks, and fees. We help you navigate them — we do not replace them.
+            risks, and fees. We help you navigate them, we do not replace them.
           </p>
           <Button asChild className="mt-8">
             <Link to="/contact">Ask for document access</Link>

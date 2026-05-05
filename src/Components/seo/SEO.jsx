@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 
 const SITE = 'Metaarth Capital'
 const DEFAULT_DESC =
-  'SEBI-registered investment management for Ultra-HNIs and family offices — mutual funds, SIP, goal-based planning, and disciplined portfolio strategies.'
+  'SEBI-registered Category III AIF manager for Ultra-HNIs and family offices, research-driven, disciplined, and governance-led investing.'
 
 export default function SEO({
   title,

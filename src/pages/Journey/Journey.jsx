@@ -11,7 +11,7 @@ const STEPS = [
   {
     icon: Coffee,
     title: 'Introductory conversation',
-    text: 'We learn what you’re optimizing for — liquidity, legacy, risk tolerance, and what keeps you up at night.',
+    text: 'We learn what you’re optimizing for, liquidity, legacy, risk tolerance, and what keeps you up at night.',
     color: 'from-accent to-brand-scarlet',
   },
   {
@@ -23,13 +23,13 @@ const STEPS = [
   {
     icon: UserPlus,
     title: 'Onboarding',
-    text: 'Account setup, mandate alignment, and communication preferences — including how often you want to hear from us.',
+    text: 'Account setup, mandate alignment, and communication preferences, including how often you want to hear from us.',
     color: 'from-accent-bright to-gold',
   },
   {
     icon: Rocket,
     title: 'Invest & review',
-    text: 'Execution follows the plan; reviews are scheduled, not accidental. Life changes trigger updates — not panic.',
+    text: 'Execution follows the plan; reviews are scheduled, not accidental. Life changes trigger updates, not panic.',
     color: 'from-gold to-accent',
   },
 ]
@@ -39,7 +39,7 @@ export default function Journey() {
     <>
       <SEO
         title="Investor journey"
-        description="Your journey with Metaarth Capital — from first conversation to onboarding, investment, and ongoing partnership."
+        description="Your journey with Metaarth Capital, from first conversation to onboarding, investment, and ongoing partnership."
         path="/journey"
       />
 
@@ -47,7 +47,7 @@ export default function Journey() {
         eyebrow="Your path"
         title="A journey built"
         titleHighlight="around you"
-        description="From the first coffee conversation to years of reviews — we map a clear path so you always know what happens next."
+        description="From the first coffee conversation to years of reviews, we map a clear path so you always know what happens next."
         imageSrc={BRAND_IMG.planning}
         imageAlt="Family planning finances together at home"
       >
@@ -71,7 +71,7 @@ export default function Journey() {
             viewport={{ once: true }}
             className="text-center font-display text-3xl font-bold text-navy dark:text-white sm:text-4xl"
           >
-            Four stages —{' '}
+            Four stages{' '}
             <span className="text-gradient-brand">one partnership</span>
           </motion.h2>
           <div className="mt-16 grid gap-8 md:grid-cols-2">
@@ -119,7 +119,7 @@ export default function Journey() {
                 Humans, not portals
               </h2>
               <p className="mt-4 leading-relaxed text-muted dark:text-stone-400">
-                You’ll have named contacts who know your file — not only a ticket
+                You’ll have named contacts who know your file, not only a ticket
                 system. Technology supports us; it doesn’t replace the relationship.
               </p>
               <Button asChild variant="outline" className="mt-8">
@@ -147,7 +147,7 @@ export default function Journey() {
 
       <CTASection
         title="Ready for the next step?"
-        subtitle="Tell us where you are today — we’ll suggest a sensible path forward."
+        subtitle="Tell us where you are today, we’ll suggest a sensible path forward."
       />
     </>
   )

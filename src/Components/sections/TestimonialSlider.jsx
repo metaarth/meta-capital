@@ -21,14 +21,14 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      'Professional, transparent engagement — aligned with how we expect institutional partners to operate.',
+      'Professional, transparent engagement, aligned with how we expect institutional partners to operate.',
     name: 'Amit Patel',
     role: 'Investor',
     org: 'Patel Enterprises',
   },
   {
     quote:
-      'Their framework balances growth orientation with governance — important for multi-generational planning.',
+      'Their framework balances growth orientation with governance, important for multi-generational planning.',
     name: 'Dr. Vikram Singh',
     role: 'Medical professional',
     org: 'Singh Healthcare',

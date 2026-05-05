@@ -81,7 +81,7 @@ export default function BlogPost() {
             <ul className="mt-3 list-disc space-y-2 pl-5 leading-relaxed text-muted dark:text-slate-400">
               <li>
                 Investing works best when decisions are tied to a written plan and
-                reviewed on a schedule — not in reaction to short-term noise.
+                reviewed on a schedule, not in reaction to short-term noise.
               </li>
               <li>
                 Costs, diversification, and behavior often matter more than picking
