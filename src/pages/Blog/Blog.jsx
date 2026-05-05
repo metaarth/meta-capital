@@ -17,7 +17,7 @@ function BlogContent() {
         eyebrow="Insights"
         title="Ideas for"
         titleHighlight="thoughtful"
-        titleRest="investors"
+        titleRest=" investors"
         description="Educational articles on AIF structures, risk, and market context, not personalized recommendations. Same craft as our home page: clarity, colour, and respect for your time."
         imageSrc={BRAND_IMG.focus}
         imageAlt="Professionals reviewing charts and documents"
