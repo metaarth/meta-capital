@@ -44,7 +44,7 @@ export default function MutualFundDisclaimer() {
   if (!visible) return null
 
   return (
-    <div className="fixed inset-0 z-120 flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm">
       <div
         role="dialog"
         aria-modal="true"
@@ -114,9 +114,6 @@ export default function MutualFundDisclaimer() {
           </p>
           <div className="h-12" aria-hidden="true" />
         </div>
-        <p className="mt-4 px-6 text-center text-xs font-medium text-amber-800 dark:text-amber-300">
-          Scroll through the disclaimer and agree to the Terms & Conditions to continue.
-        </p>
         <div className="mt-3 px-6">
           <label className="flex cursor-pointer items-start gap-2 rounded-lg border border-amber-300/80 bg-white/70 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:border-amber-500/30 dark:bg-black/20 dark:text-amber-200">
             <input
@@ -138,6 +135,9 @@ export default function MutualFundDisclaimer() {
               .
             </span>
           </label>
+          <p className="mt-4 px-6 text-center text-xs font-medium text-amber-800 dark:text-amber-300">
+          Scroll through the disclaimer and agree to the Terms & Conditions to continue.
+        </p>
         </div>
         <div className="mt-4 h-1.5 w-full bg-amber-200/70 dark:bg-amber-900/50">
           <div

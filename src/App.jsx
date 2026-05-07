@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import MainLayout from '@/components/layout/MainLayout'
 import ScrollToTop from '@/components/layout/ScrollToTop'
+import MutualFundDisclaimer from '@/components/common/MutualFundDisclaimer'
 import Home from '@/pages/Home/Home'
 import About from '@/pages/About/About'
 import Services from '@/pages/Services/Services'
@@ -23,6 +24,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <MutualFundDisclaimer />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
