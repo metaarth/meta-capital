@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { AlertTriangle, FileText, LineChart } from 'lucide-react'
+import { AlertTriangle, FileText, Landmark, Layers3, LineChart, Wallet } from 'lucide-react'
 import SEO from '@/components/seo/SEO'
 import PageHero from '@/components/sections/PageHero'
 import CTASection from '@/components/sections/CTASection'
@@ -20,7 +20,7 @@ export default function Performance() {
         eyebrow="Reporting"
         title="Clarity on"
         titleHighlight="outcomes"
-        titleRest="with honest limits"
+        titleRest=" with honest limits"
         description="We believe sophisticated investors deserve clear reporting and conservative language. Markets are uncertain; labels like ‘outperformance’ should be earned in context, not marketing."
         imageSrc="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80"
         imageAlt="Financial growth chart on a market screen"
@@ -48,6 +48,72 @@ export default function Performance() {
               scheme-related documents carefully. This page does not display live
               performance data, request official factsheets and disclosures from
               our team or through prescribed regulatory channels.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200/60 bg-section-mesh py-16 dark:border-stone-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <h2 className="font-display text-2xl font-bold text-navy dark:text-white sm:text-3xl">
+              AIF essentials at a glance
+            </h2>
+            <p className="mt-3 text-muted dark:text-stone-400">
+              Helpful context before you evaluate any Category III strategy.
+            </p>
+          </motion.div>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                icon: Wallet,
+                title: 'Minimum ticket',
+                text: 'AIF investments are typically positioned for HNIs/UHNIs, with a common minimum commitment of Rs. 1 crore.',
+              },
+              {
+                icon: Landmark,
+                title: 'Regulatory framework',
+                text: 'AIFs are regulated by SEBI under the Alternative Investment Funds Regulations, 2012.',
+              },
+              {
+                icon: Layers3,
+                title: 'Three broad categories',
+                text: 'AIFs are commonly classified into Category I, II, and III based on mandate and permissible strategies.',
+              },
+            ].map((item, i) => {
+              const Icon = item.icon
+              return (
+                <motion.article
+                  key={item.title}
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.06 }}
+                  className="rounded-2xl border border-stone-200/90 bg-white/95 p-6 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5"
+                >
+                  <Icon className="size-8 text-accent dark:text-accent-bright" strokeWidth={1.6} />
+                  <h3 className="mt-4 font-display text-lg font-semibold text-navy dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted dark:text-stone-400">
+                    {item.text}
+                  </p>
+                </motion.article>
+              )
+            })}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-stone-200/90 bg-white/90 p-5 text-sm text-muted dark:border-stone-700 dark:bg-white/4 dark:text-stone-400">
+            <p>
+              Practical note: in many structures, a demat account may not be mandatory for onboarding, and some
+              funds permit NRI participation subject to scheme terms, KYC, FEMA/tax requirements, and manager
+              eligibility checks.
             </p>
           </div>
         </div>
@@ -88,17 +154,17 @@ export default function Performance() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-3xl border-2 border-accent/20 shadow-[var(--shadow-card)]"
+              className="relative overflow-hidden rounded-3xl border-2 border-accent/20 shadow-(--shadow-card)"
             >
               <img
                 src={BRAND_IMG.advisor}
                 alt="Advisor walking a client through portfolio reporting"
-                className="aspect-[4/3] w-full object-cover"
+                className="aspect-4/3 w-full object-cover"
                 width={800}
                 height={600}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-red-900/50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-red-900/50 to-transparent" />
               <p className="absolute bottom-6 left-6 right-6 text-sm font-medium text-white drop-shadow-md">
                 We prefer a conversation around numbers, not a PDF you file away
                 unread.

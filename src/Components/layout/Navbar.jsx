@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { name: 'AIF', href: '/aif' },
   { name: 'Insights', href: '/blog' },
   { name: 'Journey', href: '/journey' },
+  { name: 'Team', href: '/team' },
   { name: 'Contact', href: '/contact' },
 ]
 
