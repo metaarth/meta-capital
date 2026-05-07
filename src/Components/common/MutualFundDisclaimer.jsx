@@ -24,13 +24,6 @@ export default function MutualFundDisclaimer() {
     }
   }, [visible])
 
-  useEffect(() => {
-    if (!visible) return
-    setCanAcknowledge(false)
-    setAgreedToTerms(false)
-    setScrollProgress(0)
-  }, [visible])
-
   const handleContentScroll = () => {
     if (!contentRef.current) return
     const { scrollTop, clientHeight, scrollHeight } = contentRef.current
