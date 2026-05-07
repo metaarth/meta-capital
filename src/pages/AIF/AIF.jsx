@@ -1,12 +1,19 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Building2, Landmark, Shield, Users } from 'lucide-react'
+import {
+  BadgeCheck,
+  BarChart3,
+  BriefcaseBusiness,
+  Building2,
+  Landmark,
+  Shield,
+  Users,
+} from 'lucide-react'
 import SEO from '@/components/seo/SEO'
 import PageHero from '@/components/sections/PageHero'
 import AIFPerformanceComparison from '@/components/sections/AIFPerformanceComparison'
 import CTASection from '@/components/sections/CTASection'
 import { Button } from '@/components/ui/button'
-import { BRAND_IMG } from '@/data/brandImagery'
 
 const HIGHLIGHTS = [
   {
@@ -31,6 +38,30 @@ const HIGHLIGHTS = [
   },
 ]
 
+const FUND_SNAPSHOT = [
+  { label: 'Fund name', value: 'Metaarth Growth Fund-I' },
+  { label: 'Category', value: 'SEBI AIF Category III' },
+  { label: 'Structure', value: 'Close-ended' },
+  { label: 'Horizon', value: '3-5 years' },
+  { label: 'SEBI registration', value: 'IN/AIF3/24-25/1761' },
+  { label: 'Trustee', value: 'Vistra ITCL' },
+]
+
+const GARP_CHECKLIST = [
+  'Sustainable growth above 15%',
+  'PEG below 1.5',
+  'ROE above 18%',
+  'Debt/Equity below 0.5',
+  'Promoter skin in the game',
+]
+
+const GOVERNANCE_POINTS = [
+  'Transparent reporting cadence',
+  'Independent trustee oversight',
+  'Independent audits and controls',
+  'Defined contributor rights and governance',
+]
+
 export default function AIF() {
   return (
     <>
@@ -42,11 +73,11 @@ export default function AIF() {
 
       <PageHero
         eyebrow="Product"
-        title="Alternative Investment"
-        titleHighlight="Fund"
+        title="Alternative "
+        titleHighlight="Investment Funds"
         description="A Category III AIF offering for qualified investors seeking a regulated, research-driven equity mandate, with the transparency and rigour you expect from an institutional partner."
-        imageSrc="https://images.unsplash.com/photo-1623151830198-5c3c0a2cf2f4?auto=format&fit=crop&w=1400&q=80"
-        imageAlt="Capital allocation concept with Indian currency notes"
+        imageSrc="https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&w=1400&q=80"
+        imageAlt="Trader workspace with multi-screen market analytics and portfolio data"
       >
         <p className="mt-4 text-sm font-medium text-accent dark:text-accent-bright">
           Information only, not an offer. Suitability and eligibility apply.
@@ -57,6 +88,11 @@ export default function AIF() {
           </Button>
           <Button asChild variant="accent">
             <Link to="/investment-philosophy">Our philosophy</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/Metaarth%20Capital.pdf" download>
+              Download brochure (PDF)
+            </a>
           </Button>
         </div>
       </PageHero>
@@ -87,7 +123,7 @@ export default function AIF() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="rounded-2xl border-l-4 border-accent bg-white/95 p-8 shadow-sm dark:border-accent-bright dark:bg-white/[0.05]"
+                className="rounded-2xl border-l-4 border-accent bg-white/95 p-8 shadow-sm dark:border-accent-bright dark:bg-white/5"
               >
                 <Icon className="size-9 text-accent dark:text-accent-bright" />
                 <h3 className="mt-4 font-display text-lg font-semibold text-navy dark:text-white">
@@ -109,8 +145,8 @@ export default function AIF() {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            src={BRAND_IMG.handshake}
-            alt="Professional handshake, partnership and trust"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"
+            alt="Finance professionals reviewing investment reports in an office meeting"
             className="rounded-3xl border-2 border-accent-bright/30 object-cover shadow-lg"
             width={800}
             height={560}
@@ -136,6 +172,149 @@ export default function AIF() {
               <li>Involve your tax and legal advisors where appropriate</li>
             </ul>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200/60 bg-section-mesh py-20 dark:border-stone-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="font-display text-3xl font-bold text-navy dark:text-white sm:text-4xl">
+              Fund snapshot
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-muted dark:text-stone-400">
+              Core details from the product note, presented in one place for faster evaluation.
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {FUND_SNAPSHOT.map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="rounded-2xl border border-stone-200/90 bg-white/95 p-6 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted dark:text-stone-500">
+                  {item.label}
+                </p>
+                <p className="mt-2 font-display text-lg font-semibold text-navy dark:text-white">
+                  {item.value}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200/60 bg-section-mesh py-20 dark:border-stone-800">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <motion.article
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-stone-200/90 bg-white/95 p-7 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5"
+          >
+            <div className="flex items-center gap-3">
+              <BarChart3 className="size-7 text-accent dark:text-accent-bright" />
+              <h3 className="font-display text-xl font-semibold text-navy dark:text-white">
+                GARP checklist used in screening
+              </h3>
+            </div>
+            <ul className="mt-5 space-y-2 text-sm text-muted dark:text-stone-400">
+              {GARP_CHECKLIST.map((point) => (
+                <li key={point} className="flex gap-2">
+                  <span className="mt-1 size-1.5 rounded-full bg-accent dark:bg-accent-bright" />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.article>
+
+          <motion.article
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="rounded-2xl border border-stone-200/90 bg-white/95 p-7 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5"
+          >
+            <div className="flex items-center gap-3">
+              <BriefcaseBusiness className="size-7 text-accent dark:text-accent-bright" />
+              <h3 className="font-display text-xl font-semibold text-navy dark:text-white">
+                Portfolio construction discipline
+              </h3>
+            </div>
+            <ul className="mt-5 space-y-2 text-sm text-muted dark:text-stone-400">
+              <li>20-25 high-conviction stocks</li>
+              <li>Sector allocation capped at 25%</li>
+              <li>Individual stock weight capped at 8%</li>
+              <li>Quarterly monitoring with valuation and earnings review</li>
+              <li>Exit triggers include valuation stretch, growth slowdown, and governance red flags</li>
+            </ul>
+          </motion.article>
+        </div>
+      </section>
+
+      <section className="border-b border-stone-200/60 bg-section-mesh py-20 dark:border-stone-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <motion.article
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-2xl border border-stone-200/90 bg-white/95 p-7 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5"
+            >
+              <div className="flex items-center gap-3">
+                <Users className="size-7 text-accent dark:text-accent-bright" />
+                <h3 className="font-display text-xl font-semibold text-navy dark:text-white">
+                  Leadership profiles
+                </h3>
+              </div>
+              <div className="mt-5 space-y-4 text-sm text-muted dark:text-stone-400">
+                <p>
+                  <span className="font-semibold text-navy dark:text-white">Nipun Madan</span> — Fund Manager
+                  profile with 15+ years of market experience in equity research and fund management.
+                </p>
+                <p>
+                  <span className="font-semibold text-navy dark:text-white">Amrishnath Tiwari</span> — Founder
+                  profile with 20+ years in finance and investments.
+                </p>
+              </div>
+            </motion.article>
+
+            <motion.article
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+              className="rounded-2xl border border-stone-200/90 bg-white/95 p-7 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5"
+            >
+              <div className="flex items-center gap-3">
+                <BadgeCheck className="size-7 text-accent dark:text-accent-bright" />
+                <h3 className="font-display text-xl font-semibold text-navy dark:text-white">
+                  Governance checkpoints
+                </h3>
+              </div>
+              <ul className="mt-5 space-y-2 text-sm text-muted dark:text-stone-400">
+                {GOVERNANCE_POINTS.map((point) => (
+                  <li key={point} className="flex gap-2">
+                    <span className="mt-1 size-1.5 rounded-full bg-accent dark:bg-accent-bright" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-xs text-muted dark:text-stone-500">
+                For complete legal terms (fees, contribution agreement, and rights), refer to official offer and
+                contribution documents shared during onboarding.
+              </p>
+            </motion.article>
+          </div>
         </div>
       </section>
 

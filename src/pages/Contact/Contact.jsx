@@ -121,8 +121,8 @@ export default function Contact() {
                 <div className="flex gap-3">
                   <MapPin className="mt-0.5 size-5 shrink-0 text-accent dark:text-accent-bright" />
                   <span>
-                    Office Space No. Part 8 &amp; 9, Saran Chamber-2, Lucknow
-                    226001, India
+                    Metaarth Capital Office Space No. Part 8 and 9, Saran
+                    Chamber- 2, Lucknow- 226001
                   </span>
                 </div>
                 <div className="flex gap-3">
@@ -139,25 +139,24 @@ export default function Contact() {
                 </div>
                 <div className="flex gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-accent dark:text-accent-bright" />
-                  <span className="text-navy dark:text-white">
-                    Use the form, we’ll reply from our official address.
-                  </span>
+                  <a
+                    href="mailto:info@metaarth.com"
+                    className="text-navy hover:underline dark:text-white"
+                  >
+                    info@metaarth.com
+                  </a>
                 </div>
               </CardContent>
             </Card>
 
-            <div
-              className="overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-100 dark:border-slate-700 dark:bg-slate-800"
-              role="img"
-              aria-label="Map placeholder, Lucknow office location"
-            >
-              <div className="flex aspect-[16/10] items-center justify-center bg-section-mesh">
-                <p className="text-center text-sm text-muted dark:text-slate-500">
-                  Map placeholder
-                  <br />
-                  <span className="text-xs">Embed Google Maps or Mapbox here</span>
-                </p>
-              </div>
+            <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-100 dark:border-slate-700 dark:bg-slate-800">
+              <iframe
+                title="Metaarth Capital office location map"
+                className="aspect-16/10 w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=Metaarth%20Capital%20Office%20Space%20No.%20Part%208%20and%209%2C%20Saran%20Chamber-%202%2C%20Lucknow-%20226001&z=16&output=embed"
+              />
             </div>
           </motion.div>
         </div>

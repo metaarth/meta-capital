@@ -7,6 +7,7 @@ const footerNav = [
     title: 'Company',
     links: [
       { label: 'About', to: '/about' },
+      { label: 'Team', to: '/team' },
       { label: 'Investment philosophy', to: '/investment-philosophy' },
       { label: 'Performance', to: '/performance' },
       { label: 'AIF', to: '/aif' },
@@ -83,8 +84,8 @@ export default function Footer() {
           <div className="flex gap-3 text-sm">
             <MapPin className="mt-0.5 size-4 shrink-0 text-brand-amber" />
             <span>
-              Office Space No. Part 8 &amp; 9, Saran Chamber-2, Lucknow, 226001,
-              India
+              Metaarth Capital Office Space No. Part 8 and 9, Saran Chamber- 2,
+              Lucknow- 226001
             </span>
           </div>
           <div className="flex gap-3 text-sm">
@@ -101,9 +102,9 @@ export default function Footer() {
           </div>
           <div className="flex gap-3 text-sm">
             <Mail className="mt-0.5 size-4 shrink-0 text-brand-amber" />
-            <Link to="/contact" className="hover:text-white">
-              Contact / enquiries
-            </Link>
+            <a href="mailto:info@metaarth.com" className="hover:text-white">
+              info@metaarth.com
+            </a>
           </div>
         </div>
 
