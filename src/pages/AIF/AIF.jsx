@@ -39,6 +39,7 @@ const HIGHLIGHTS = [
 ]
 
 const FUND_SNAPSHOT = [
+  { label: 'Investment manager', value: 'Metaarth Investments Private Limited' },
   { label: 'Fund name', value: 'Metaarth Growth Fund-I' },
   { label: 'Category', value: 'SEBI AIF Category III' },
   { label: 'Structure', value: 'Close-ended' },

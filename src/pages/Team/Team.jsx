@@ -8,7 +8,7 @@ import shivamImg from '@/assets/Team/SAN.avif'
 
 const TEAM_MEMBERS = [
   {
-    name: 'Ambrishnath Tiwari',
+    name: 'Ambrish Nath Tiwari',
     role: 'Founder',
     image: ambrishnathImg,
     summary:
@@ -27,17 +27,6 @@ const TEAM_MEMBERS = [
     points: [
       'Research-led security selection and portfolio construction',
       'Strong focus on risk controls and process discipline',
-    ],
-  },
-  {
-    name: 'Shivam Mani Tripathi',
-    role: 'Wealth Manager',
-    image: shivamImg,
-    summary:
-      '7+ years of market expertise with a focus on personalized wealth and portfolio solutions for long-term growth.',
-    points: [
-      'Client planning, portfolio reviews, and investment communication',
-      'Research-driven recommendations aligned to investor goals',
     ],
   },
 ]
@@ -96,7 +85,7 @@ export default function Team() {
             </p>
           </motion.div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mx-auto mt-12 grid max-w-5xl gap-8 md:grid-cols-2">
             {TEAM_MEMBERS.map((member, i) => (
               <motion.div
                 key={member.name}
@@ -104,6 +93,7 @@ export default function Team() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
+                className="mx-auto w-full max-w-md"
               >
                 <Card className="h-full border-stone-200/90 bg-white/95 shadow-(--shadow-card) dark:border-stone-700 dark:bg-white/5">
                   <div className="overflow-hidden rounded-t-xl border-b border-stone-200/80 dark:border-stone-700/70">

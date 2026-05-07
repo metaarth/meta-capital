@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AlertTriangle, ShieldCheck } from 'lucide-react'
 import logoUrl from '@/assets/logo.png'
 
 export default function MutualFundDisclaimer() {
@@ -37,40 +38,40 @@ export default function MutualFundDisclaimer() {
   if (!visible) return null
 
   return (
-    <div className="fixed inset-0 z-[120] flex items-center justify-center bg-slate-950/75 p-4 backdrop-blur-md">
+    <div className="fixed inset-0 z-120 flex items-center justify-center bg-[#09090b]/75 p-4 backdrop-blur-md">
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="mutual-fund-disclaimer-title"
-        className="w-full max-w-2xl overflow-hidden rounded-3xl border border-amber-300/80 bg-linear-to-b from-amber-50 via-amber-50 to-white text-amber-950 shadow-[0_30px_80px_rgba(2,6,23,0.45)] dark:border-amber-500/30 dark:from-[#2d1907] dark:via-[#24170a] dark:to-[#1f160f] dark:text-amber-100"
+        className="w-full max-w-3xl overflow-hidden rounded-3xl border border-white/20 bg-white/90 text-navy shadow-[0_24px_80px_rgba(0,0,0,0.45)] ring-1 ring-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-[#111113]/95 dark:text-stone-100 dark:ring-white/10"
       >
-        <div className="border-b border-amber-300/60 bg-amber-100/75 px-6 py-5 dark:border-amber-500/20 dark:bg-amber-900/20">
-          <img
-            src={logoUrl}
-            alt="Metaarth Capital"
-            className="mx-auto h-14 w-auto object-contain"
-            width={220}
-            height={56}
-          />
-          <div className="mt-4 flex items-center justify-center">
-            <span className="rounded-full border border-amber-400/70 bg-white/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-amber-800 dark:border-amber-400/30 dark:bg-amber-950/60 dark:text-amber-300">
+        <div className="border-b border-stone-200/70 bg-linear-to-r from-white via-stone-50 to-white px-6 py-4 dark:border-stone-700 dark:from-[#18181b] dark:via-[#131316] dark:to-[#18181b]">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <img
+              src={logoUrl}
+              alt="Metaarth Capital"
+              className="h-9 w-auto object-contain"
+              width={220}
+              height={56}
+            />
+            <span className="inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent dark:border-accent-bright/40 dark:bg-accent-bright/10 dark:text-accent-bright">
+              <AlertTriangle className="size-3.5" />
               Investor Notice
             </span>
           </div>
         </div>
-        <h2
-          id="mutual-fund-disclaimer-title"
-          className="px-6 pt-5 text-center font-display text-2xl font-semibold tracking-tight"
-        >
-          Important Disclaimer
-        </h2>
-        <p className="px-6 pt-2 text-center text-sm text-amber-800/90 dark:text-amber-200/80">
-          Please review this information carefully before continuing.
-        </p>
+        <div className="px-6 pb-3 pt-5">
+          <h2 id="mutual-fund-disclaimer-title" className="font-display text-2xl font-semibold tracking-tight">
+            Before You Continue
+          </h2>
+          <p className="mt-1.5 text-sm text-muted dark:text-stone-400">
+            Review risk disclosures and confirm Terms & Conditions acceptance.
+          </p>
+        </div>
         <div
           ref={contentRef}
           onScroll={handleContentScroll}
-          className="mx-6 mt-4 h-56 space-y-3 overflow-y-auto rounded-2xl border border-amber-300/70 bg-white/85 p-4 text-sm leading-relaxed shadow-inner dark:border-amber-500/20 dark:bg-black/25"
+          className="mx-6 mt-1 h-56 space-y-3 overflow-y-auto rounded-2xl border border-stone-200/90 bg-white/80 p-4 text-sm leading-relaxed shadow-inner dark:border-stone-700 dark:bg-white/5"
         >
           <p>
             Mutual Fund investments are subject to market risks. Please read all
@@ -108,12 +109,27 @@ export default function MutualFundDisclaimer() {
           <div className="h-12" aria-hidden="true" />
         </div>
         <div className="mt-3 px-6">
-          <label className="flex cursor-pointer items-start gap-2 rounded-lg border border-amber-300/80 bg-white/70 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:border-amber-500/30 dark:bg-black/20 dark:text-amber-200">
+          <div className="grid gap-2 rounded-xl border border-stone-200/90 bg-white/70 p-3 dark:border-stone-700 dark:bg-white/5">
+            <div className="flex items-center justify-between">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted dark:text-stone-500">
+                Checklist
+              </p>
+              <span
+                className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${
+                  canAcknowledge
+                    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300'
+                    : 'bg-stone-200 text-stone-700 dark:bg-stone-700 dark:text-stone-300'
+                }`}
+              >
+                {canAcknowledge ? 'Scrolled' : 'Scroll pending'}
+              </span>
+            </div>
+            <label className="flex cursor-pointer items-start gap-2 text-xs leading-relaxed text-stone-700 dark:text-stone-300">
             <input
               type="checkbox"
               checked={agreedToTerms}
               onChange={(e) => setAgreedToTerms(e.target.checked)}
-              className="mt-0.5 size-4 accent-amber-700 dark:accent-amber-400"
+              className="mt-0.5 size-4 accent-accent dark:accent-accent-bright"
             />
             <span>
               I have read and agree to the{' '}
@@ -121,45 +137,42 @@ export default function MutualFundDisclaimer() {
                 to="/terms-and-conditions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-300"
+                className="font-semibold text-accent underline underline-offset-2 hover:text-accent-dark dark:text-accent-bright dark:hover:text-gold"
               >
                 Terms & Conditions
               </Link>
               .
             </span>
-          </label>
-          <div className="mt-3 flex items-center justify-between text-xs">
-            <p className="font-medium text-amber-800 dark:text-amber-300">
-              Scroll through the disclaimer and agree to continue.
-            </p>
+            </label>
             <span
-              className={`rounded-full px-2 py-0.5 font-semibold ${
-                canAcknowledge && agreedToTerms
+              className={`inline-flex w-fit rounded-full px-2 py-0.5 text-[11px] font-semibold ${
+                agreedToTerms
                   ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300'
-                  : 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300'
+                  : 'bg-stone-200 text-stone-700 dark:bg-stone-700 dark:text-stone-300'
               }`}
             >
-              {canAcknowledge && agreedToTerms ? 'Ready' : 'Pending'}
+              {agreedToTerms ? 'Terms accepted' : 'Terms pending'}
             </span>
           </div>
         </div>
-        <div className="mt-4 h-1.5 w-full bg-amber-200/70 dark:bg-amber-900/50">
+        <div className="mt-4 h-1.5 w-full bg-stone-200 dark:bg-stone-700">
           <div
             className={`h-full transition-all duration-150 ${
-              canAcknowledge ? 'bg-emerald-500' : 'bg-amber-500/80 dark:bg-amber-400'
+              canAcknowledge ? 'bg-emerald-500' : 'bg-accent/70 dark:bg-accent-bright'
             }`}
             style={{ width: `${scrollProgress}%` }}
           />
         </div>
-        <div className="flex items-center justify-between px-6 py-5">
-          <p className="text-xs text-amber-800/90 dark:text-amber-300/90">
+        <div className="flex items-center justify-between px-6 py-4">
+          <p className="inline-flex items-center gap-1 text-xs font-medium text-muted dark:text-stone-400">
+            <ShieldCheck className="size-4 text-emerald-500" />
             Progress: {Math.round(scrollProgress)}%
           </p>
           <button
             type="button"
             onClick={() => setVisible(false)}
             disabled={!canAcknowledge || !agreedToTerms}
-            className="rounded-xl bg-linear-to-r from-amber-700 to-amber-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition enabled:hover:from-amber-800 enabled:hover:to-amber-700 enabled:hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 dark:from-amber-600 dark:to-amber-500 dark:enabled:hover:from-amber-500 dark:enabled:hover:to-amber-400"
+            className="rounded-xl bg-linear-to-r from-accent to-accent-dark px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all enabled:hover:-translate-y-0.5 enabled:hover:from-accent-dark enabled:hover:to-red-900 enabled:hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50 dark:from-accent dark:to-accent-dark dark:enabled:hover:from-brand-scarlet dark:enabled:hover:to-accent"
           >
             Agree & Continue
           </button>
