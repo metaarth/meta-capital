@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import logoUrl from '@/assets/logo.png'
 
 export default function MutualFundDisclaimer() {
   const [visible, setVisible] = useState(true)
   const [canAcknowledge, setCanAcknowledge] = useState(false)
+  const [agreedToTerms, setAgreedToTerms] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const contentRef = useRef(null)
 
@@ -25,6 +27,7 @@ export default function MutualFundDisclaimer() {
   useEffect(() => {
     if (!visible) return
     setCanAcknowledge(false)
+    setAgreedToTerms(false)
     setScrollProgress(0)
   }, [visible])
 
@@ -112,8 +115,30 @@ export default function MutualFundDisclaimer() {
           <div className="h-12" aria-hidden="true" />
         </div>
         <p className="mt-4 px-6 text-center text-xs font-medium text-amber-800 dark:text-amber-300">
-          Scroll through the disclaimer to enable the confirmation button.
+          Scroll through the disclaimer and agree to the Terms & Conditions to continue.
         </p>
+        <div className="mt-3 px-6">
+          <label className="flex cursor-pointer items-start gap-2 rounded-lg border border-amber-300/80 bg-white/70 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:border-amber-500/30 dark:bg-black/20 dark:text-amber-200">
+            <input
+              type="checkbox"
+              checked={agreedToTerms}
+              onChange={(e) => setAgreedToTerms(e.target.checked)}
+              className="mt-0.5 size-4 accent-amber-700 dark:accent-amber-400"
+            />
+            <span>
+              I have read and agree to the{' '}
+              <Link
+                to="/terms-and-conditions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline underline-offset-2 hover:text-amber-700 dark:hover:text-amber-300"
+              >
+                Terms & Conditions
+              </Link>
+              .
+            </span>
+          </label>
+        </div>
         <div className="mt-4 h-1.5 w-full bg-amber-200/70 dark:bg-amber-900/50">
           <div
             className={`h-full transition-all duration-150 ${
@@ -126,7 +151,7 @@ export default function MutualFundDisclaimer() {
           <button
             type="button"
             onClick={() => setVisible(false)}
-            disabled={!canAcknowledge}
+            disabled={!canAcknowledge || !agreedToTerms}
             className="rounded-xl bg-linear-to-r from-amber-700 to-amber-600 px-5 py-2.5 text-sm font-semibold text-white transition enabled:hover:from-amber-800 enabled:hover:to-amber-700 disabled:cursor-not-allowed disabled:opacity-50 dark:from-amber-600 dark:to-amber-500 dark:enabled:hover:from-amber-500 dark:enabled:hover:to-amber-400"
           >
             I Understand
