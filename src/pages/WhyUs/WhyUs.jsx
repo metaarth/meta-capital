@@ -40,7 +40,7 @@ export default function WhyUs() {
 
       <PageHero
         eyebrow="Why us"
-        title="Why investors"
+        title="Why"
         titleHighlight="choose us"
         description="A disciplined, research-led approach with governance standards designed for sophisticated investors and long-horizon outcomes."
         imageSrc="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80"
