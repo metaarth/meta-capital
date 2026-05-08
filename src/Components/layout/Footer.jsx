@@ -49,7 +49,7 @@ export default function Footer() {
               <img
                 src={logoUrl}
                 alt="Metaarth Capital"
-                className="h-10 w-auto max-w-[220px] object-contain object-left"
+                className="h-22 w-auto max-w-[220px] object-contain object-left"
                 width={220}
                 height={44}
               />
