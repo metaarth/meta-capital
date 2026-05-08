@@ -74,7 +74,7 @@ export default function MutualFundDisclaimer() {
           className="mx-6 mt-1 h-56 space-y-3 overflow-y-auto rounded-2xl border border-stone-200/90 bg-white/80 p-4 text-sm leading-relaxed shadow-inner dark:border-stone-700 dark:bg-white/5"
         >
           <p>
-            Mutual Fund investments are subject to market risks. Please read all
+            Investments are subject to market risks. Please read all
             scheme related documents carefully before investing.
           </p>
           <p>
