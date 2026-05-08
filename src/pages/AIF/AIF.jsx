@@ -43,8 +43,7 @@ const FUND_SNAPSHOT = [
   { label: 'Fund name', value: 'Metaarth Growth Fund-I' },
   { label: 'Category', value: 'SEBI AIF Category III' },
   { label: 'Structure', value: 'Close-ended' },
-  { label: 'Horizon', value: '3-5 years' },
-  { label: 'SEBI registration', value: 'IN/AIF3/24-25/1761' },
+  { label: 'SEBI registration', value: 'IN/A1F3/24-25/1761' },
   { label: 'Trustee', value: 'Vistra ITCL' },
 ]
 

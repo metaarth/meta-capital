@@ -12,6 +12,8 @@ import Performance from '@/pages/Performance/Performance'
 import AIF from '@/pages/AIF/AIF'
 import Journey from '@/pages/Journey/Journey'
 import Team from '@/pages/Team/Team'
+import PartnerWithUs from '@/pages/PartnerWithUs/PartnerWithUs'
+import WhyUs from '@/pages/WhyUs/WhyUs'
 import Contact from '@/pages/Contact/Contact'
 import Terms from '@/pages/Terms/Terms'
 import Privacy from '@/pages/Privacy/Privacy'
@@ -34,6 +36,8 @@ export default function App() {
           <Route path="/aif" element={<AIF />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/partner-with-us" element={<PartnerWithUs />} />
+          <Route path="/why-us" element={<WhyUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/investment-products" element={<InvestmentProducts />} />
           <Route path="/contact" element={<Contact />} />

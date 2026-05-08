@@ -43,7 +43,7 @@ export default function Performance() {
               Important disclaimer
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted dark:text-stone-400">
-              Mutual fund and AIF investments are subject to market risks. Past
+              Investments are subject to market risks. Past
               performance is not indicative of future results. Read all
               scheme-related documents carefully. This page does not display live
               performance data, request official factsheets and disclosures from

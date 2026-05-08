@@ -8,6 +8,7 @@ const footerNav = [
     links: [
       { label: 'About', to: '/about' },
       { label: 'Team', to: '/team' },
+      { label: 'Partner with us', to: '/partner-with-us' },
       { label: 'Investment philosophy', to: '/investment-philosophy' },
       { label: 'Performance', to: '/performance' },
       { label: 'AIF', to: '/aif' },
@@ -53,6 +54,7 @@ export default function Footer() {
                 height={44}
               />
             </Link>
+            <p className='text-xs text-slate-500'>SEBI Reg. No.: IN/A1F3/24-25/1761</p>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-slate-400">
               Professional investment management for Ultra-HNIs and family
               offices, disciplined, research-driven strategies with regulatory
@@ -88,7 +90,8 @@ export default function Footer() {
           <div className="flex gap-3 text-sm">
             <MapPin className="mt-0.5 size-4 shrink-0 text-brand-amber" />
             <span>
-              Metaarth Capital Office Space No. Part 8 and 9, Saran Chamber- 2,
+              Metaarth Capital Office Space No. Part 8 and 9,<br/>
+              Saran Chamber- 2,
               Lucknow- 226001
             </span>
           </div>

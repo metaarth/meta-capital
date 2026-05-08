@@ -15,8 +15,8 @@ const NAV_LINKS = [
   { name: 'AIF', href: '/aif' },
   { name: 'Insights', href: '/blog' },
   { name: 'Journey', href: '/journey' },
+  { name: 'Why Us', href: '/why-us' },
   { name: 'Team', href: '/team' },
-  { name: 'Contact', href: '/contact' },
 ]
 
 const desktopLinkClass = ({ isActive }) =>
